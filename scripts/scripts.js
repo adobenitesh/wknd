@@ -277,6 +277,7 @@ function loadDelayed() {
 
 async function loadPage() {
   await window.hlx.plugins.load('eager');
+  loadAtJs();
   await loadEager(document);
   await window.hlx.plugins.load('lazy');
   await loadLazy(document);
