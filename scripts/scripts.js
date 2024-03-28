@@ -252,6 +252,16 @@ async function loadLazy(doc) {
 }
 
 /**
+ * loads At.js
+ */
+function loadAtJs() {
+  // eslint-disable-next-line import/no-cycle
+  window.hlx.plugins.load('eager');
+  window.hlx.plugins.run('loadAtJs');
+  return import('./at.js');
+}
+
+/**
  * loads everything that happens a lot later, without impacting
  * the user experience.
  */
