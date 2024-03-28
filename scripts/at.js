@@ -5,6 +5,11 @@
  * at.js 2.11.4 | (c) Adobe Systems Incorporated | All rights reserved
  * zepto.js | (c) 2010-2016 Thomas Fuchs | zeptojs.com/license
 */
+
+window.targetGlobalSettings = {
+   cookieDomain: 'main--wknd--adobenitesh.hlx.page'
+};
+
 window.adobe=window.adobe||{},window.adobe.target=function(){"use strict";var t=window,e=document,n=!e.documentMode||e.documentMode>=11;var r,o,i,c=e.compatMode&&"CSS1Compat"===e.compatMode&&n&&(r=window.navigator.userAgent,o=r.indexOf("MSIE ")>0,i=r.indexOf("Trident/")>0,!(o||i)),s=t.targetGlobalSettings;if(!c||s&&!1===s.enabled){function u(){}function a(t){var e={then:function(n,r){return n(t),e},catch:function(t){return e},finally:function(n){return n(t),e}};return e}return t.adobe=t.adobe||{},t.adobe.target={VERSION:"",event:{},getOffer:u,getOffers:a,applyOffer:u,applyOffers:a,sendNotifications:a,trackEvent:u,triggerView:u,registerExtension:u,init:u},t.mboxCreate=u,t.mboxDefine=u,t.mboxUpdate=u,"console"in t&&"warn"in t.console&&(c||t.console.warn("AT: Adobe Target content delivery is disabled. Update your DOCTYPE to support Standards mode."),t.console.warn("AT: Adobe Target content delivery is disabled in targetGlobalSettings.")),t.adobe.target}var f="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{};function l(t){if(t.__esModule)return t;var e=Object.defineProperty({},"__esModule",{value:!0});return Object.keys(t).forEach((function(n){var r=Object.getOwnPropertyDescriptor(t,n);Object.defineProperty(e,n,r.get?r:{enumerable:!0,get:function(){return t[n]}})})),e}
 /*
 	object-assign
